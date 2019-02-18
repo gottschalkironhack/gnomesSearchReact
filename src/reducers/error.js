@@ -10,7 +10,7 @@ const initialState = {
   status: false,
 };
 
-export default function errors(state = initialState, action) {
+export default function error(state = initialState, action) {
   switch (action.type) {
     case SET_NETWORK_ERROR:
       return {

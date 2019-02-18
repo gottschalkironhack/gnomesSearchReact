@@ -5,9 +5,8 @@ import {
 } from './actionTypes';
 import { resetApiErrors, setApiErrors } from './apiErrors';
 import { resetApiSuccess } from './apiSuccess';
-import { getGnomesData } from '../services/GnomesApi';
 import handleApiErrors from './helper/handleApiErrors';
-import setLocalStorage from './helper/setLocalStorage';
+import getLocalStorage from './helper/getLocalStorage';
 
 const fetchGnomesBegin = () => ({
   type: FETCH_GNOMES_BEGIN,
@@ -22,20 +21,17 @@ const fetchGnomesFailure = () => ({
   type: FETCH_GNOMES_FAILURE,
 });
 
-export const getGnomes = () => (dispatch) => {
+export const getLocalStorageGnomes = () => (dispatch) => {
   dispatch(resetApiErrors());
   dispatch(fetchGnomesBegin());
   dispatch(resetApiSuccess());
-  getGnomesData()
-    .then((gnomes) => {
-      dispatch(fetchGnomesSuccess(gnomes));
-      setLocalStorage({
-        gnomes,
-      });
+  getLocalStorage()
+    .then((localGnomes) => {
+      dispatch(fetchGnomesSuccess(localGnomes.gnomes));
     })
-    .catch((error) => {
+    .catch(() => {
       dispatch(fetchGnomesFailure());
-      const errorMessage = handleApiErrors(error, 'Data could not be retrieved');
+      const errorMessage = handleApiErrors('Data could not be retrieved');
       dispatch(setApiErrors(errorMessage));
     });
 };

@@ -31,9 +31,9 @@ const Gnome = ({ gnome }) => {
   });
 
   return (
-    <Col className="mb-4" sm="12" md="4">
+    <Col className="mb-4" sm="12">
       <Card>
-        <img className="card-img-top" src={thumbnail} alt="`Gnome image of ${name}`"/>
+        <img className="card-img-top" src={thumbnail} alt="Gnome Portrait"/>
         <CardHeader>{name}</CardHeader>
         <CardBody>
           <CardTitle>

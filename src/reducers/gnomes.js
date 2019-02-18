@@ -7,7 +7,7 @@ const initialState = {
   gnomes: [],
 };
 
-const gnomes = (state = initialState, action) => {
+export default function gnomes(state = initialState, action) {
   switch (action.type) {
     case FETCH_GNOMES_SUCCESS:
       return {
@@ -17,13 +17,13 @@ const gnomes = (state = initialState, action) => {
     default:
       return state;
   }
-};
+}
 
-export default gnomes;
+export const getGnomesSelector = state => state.gnomes.gnomes;
 
 export const extractProfessions = (currentGnomes) => {
   const professions = [];
-  currentGnomes.map((gnome) => {
+  currentGnomes.gnomes.gnomes.forEach((gnome) => {
     gnome.professions.forEach((profession) => {
       if (professions.indexOf(profession) === -1) professions.push(profession);
     });
@@ -32,6 +32,7 @@ export const extractProfessions = (currentGnomes) => {
 };
 
 export const getProfessions = createSelector(
+  getGnomesSelector,
   extractProfessions,
 );
 
@@ -40,8 +41,9 @@ export const getFilteredGnomes = (currentGnomes,
     searchQuery, bodyParams, hairColor, profession,
   }) => {
   let filtered = currentGnomes;
+
   if (searchQuery) {
-    filtered = currentGnomes.filter((gnome) => {
+    filtered = filtered.filter((gnome) => {
       return gnome.name.toLowerCase().includes(searchQuery.toLowerCase());
     });
   }

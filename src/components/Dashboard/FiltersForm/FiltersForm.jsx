@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 import { FormGroup, Label } from 'reactstrap';
 import { Formik, Field, Form } from 'formik';
 
@@ -50,25 +51,28 @@ const FiltersForm = (props) => (
               }
             }
             > 
+            <option value="">Choose Body param</option>
             <option value="age">Age</option>
             <option value="weight">Weight</option>
             <option value="height">Height</option>
           </select>
         </FormGroup>
         <FormGroup className='form-inline col-4'>
-          <Label className='font-weight-bold text-white' htmlFor="hairColor">Filter by</Label>
+          <Label className='font-weight-bold text-white' htmlFor="hairColor">Filter by hair</Label>
           <select 
             className='form-control col-12'
             type="checkbox"
             id="hairColor"
             name="hairColor"
             onChange={event => { 
+              setFieldValue('hairColor', event.target.value, false);
               event.persist(); 
               setFieldValue('hairColor', event.target.value, false);
               submitForm();
               }
             }
             > 
+            <option value="">Choose a Hair color</option>
             <option value="Green">Green</option>
             <option value="Black">Black</option>
             <option value="Red">Red</option>
@@ -90,7 +94,7 @@ const FiltersForm = (props) => (
               submitForm();
               }
             }
-            > 
+            > <option value="">Choose a profession</option>
             { props.professions.map((profession, index) => {
               return <option key={index} value={profession}>{profession}</option>
             })}
@@ -102,5 +106,10 @@ const FiltersForm = (props) => (
   )}
   </Formik>
 )
+
+FiltersForm.propTypes = {
+  filterGnomesByQuery: PropTypes.func.isRequired,
+  professions: PropTypes.array.isRequired,
+};
 
 export default FiltersForm;
