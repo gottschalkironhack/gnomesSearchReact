@@ -1,4 +1,4 @@
-#Gnomes Data Search with React
+# Gnomes Data Search with React
 
 Framework: React
 State management Container: Redux
