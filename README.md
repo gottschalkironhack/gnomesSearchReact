@@ -1,25 +1,29 @@
 # Gnomes Data Search with React
 
-This application gives the option of filtering and sorting Gnomes Data by several options.
+This application gives the option of filtering and sorting gnomes data by several options.
 The following stack/modules are relevant cornerstones of the application.
 
-Framework: React
+**Framework:** React
 
-CSS: Bootstrap CSS with reactstrap
+**CSS:** Bootstrap CSS with reactstrap
 
-Form validation: Formik as suggested by React docs
+**Form validation:** Formik as suggested by React docs
 
-State management container: Redux
+**State management container:** Redux
 
-Persisted State: The gnomes data persist in the LocalStorage to load the data locally instead of fetching it from the API within the refresh time limit. A refresh of the data is required after 5 minutes which implicates a call to the API.
+**Persisted State:** The gnomes data persist in the LocalStorage to load the data locally instead of fetching it from the API within the refresh time limit. A refresh of the data is required after 5 minutes which implicates a call to the API.
 
 ## To run this project on your local computer follow the following steps:
 
 ### 1 Clone repository into your local folder
-```git clone https://github.com/gottschalkironhack/gnomesSearchReact.git```
+```
+git clone https://github.com/gottschalkironhack/gnomesSearchReact.git
+```
 
 ### 2 Move into project's directory folder
-```cd gnomesSearchReact```
+```
+cd gnomesSearchReact
+```
 
 ### 3 Check your version of node
 Make sure you have node version >= 8.9.0 installed. I am using version v11.10.1.
@@ -39,7 +43,9 @@ to install packages in package.json
 ### 5 Start the app
 Run
 
-```yarn start```
+```
+yarn start
+```
 
 to run the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
@@ -47,7 +53,9 @@ Open http://localhost:3000 to view it in the browser.
 ### 6 Optional: Check for lint errors
 Run
 
-```yarn lint```
+```
+yarn lint
+```
 
 to run linter. Errors will be shown in terminal.
 
