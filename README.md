@@ -1,9 +1,13 @@
 # Gnomes Data Search with React
 
 Framework: React
+
 State management Container: Redux
-CSS: Bootstrap CSS with reactstrap.
+
+CSS: Bootstrap CSS with reactstrap
+
 Form validation: Formik as suggested by React docs
+
 Persisted State: LocalStorage when data fresh
 
 To run this project on your local computer follow the following steps:
@@ -26,3 +30,5 @@ Runs linter and shows errors in terminal.
 
 ### yarn build
 Builds the production version of the app.
+
+See a demo here: https://gottschalkironhack.github.io/GnomesApp/
