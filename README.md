@@ -1,34 +1,51 @@
 # Gnomes Data Search with React
 
-Framework: React
+This application gives the option of filtering and sorting Gnomes Data by several options.
+The following stack/modules are relevant cornerstones of the application.
 
-State management Container: Redux
+Framework: React
 
 CSS: Bootstrap CSS with reactstrap
 
 Form validation: Formik as suggested by React docs
 
-Persisted State: LocalStorage when data fresh
+State management container: Redux
 
-To run this project on your local computer follow the following steps:
+Persisted State: The gnomes data persist in the LocalStorage to load the data locally instead of fetching it from the API within the refresh time limit. A refresh of the data is required after 5 minutes which implicates a call to the API.
 
-### Clone repository
-git clone https://github.com/gottschalkironhack/gnomesSearchReact.git
+## To run this project on your local computer follow the following steps:
 
-### Move into project's directory folder
-cd gnomesSearchReact
+### 1 Clone repository into your local folder
+```git clone https://github.com/gottschalkironhack/gnomesSearchReact.git```
 
-### yarn install
-Run yarn install to install packages in package.json
+### 2 Move into project's directory folder
+```cd gnomesSearchReact```
 
-### yarn start
-Runs the app in the development mode.
+### 3 Check your version of node
+Make sure you have node version >= 8.9.0 installed. I am using version v11.10.1.
+To install the newest version of node you can run 
+
+```nvm install node``` 
+
+### 4 Install the node modules
+Run 
+```yarn install```
+to install packages in package.json
+
+### 5 Start the app
+Run
+```yarn start```
+to run the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
-### yarn lint
-Runs linter and shows errors in terminal.
+### 6 Optional: Check for lint errors
+Run
+```yarn lint```
+to run linter. Errors will be shown in terminal.
 
-### yarn build
-Builds the production version of the app.
+### 7 Optional: Build version of App
+Run
+```yarn build```
+to build the production version of the app.
 
-See a demo here: https://gottschalkironhack.github.io/GnomesApp/
+## Find a demo of the application here: https://gottschalkironhack.github.io/GnomesApp/
