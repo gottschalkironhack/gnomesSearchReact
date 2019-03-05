@@ -25,27 +25,37 @@ Persisted State: The gnomes data persist in the LocalStorage to load the data lo
 Make sure you have node version >= 8.9.0 installed. I am using version v11.10.1.
 To install the newest version of node you can run 
 
-```nvm install node``` 
+```
+nvm install node
+``` 
 
 ### 4 Install the node modules
 Run 
-```yarn install```
+```
+yarn install
+```
 to install packages in package.json
 
 ### 5 Start the app
 Run
+
 ```yarn start```
+
 to run the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
 ### 6 Optional: Check for lint errors
 Run
+
 ```yarn lint```
+
 to run linter. Errors will be shown in terminal.
 
 ### 7 Optional: Build version of App
 Run
-```yarn build```
+```
+yarn build
+```
 to build the production version of the app.
 
-## Find a demo of the application here: https://gottschalkironhack.github.io/GnomesApp/
+### Find a demo of the application here: https://gottschalkironhack.github.io/GnomesApp/
