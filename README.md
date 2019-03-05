@@ -13,6 +13,8 @@ The following stack/modules are relevant cornerstones of the application.
 
 **Persisted State:** The gnomes data persist in the LocalStorage to load the data locally instead of fetching it from the API within the refresh time limit. A refresh of the data is required after 5 minutes which implicates a call to the API.
 
+**ESLint:** Clean Code => ESLint runs a linter on the js code. As base set of rules I am extending Airbnb's linter rules.
+
 ## To run this project on your local computer follow the following steps:
 
 ### 1 Clone repository into your local folder
@@ -57,7 +59,7 @@ Run
 yarn lint
 ```
 
-to run linter. Errors will be shown in terminal.
+to run the ESLinter. Errors will be shown in terminal. Rules can be added to or removed from the Airbnb set of rules in the **.eslintrc** file in the root directory under the option **rules**.
 
 ### 7 Optional: Build version of App
 Run
